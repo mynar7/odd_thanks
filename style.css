@@ -43,7 +43,8 @@ header img {
 header .scroll-down {
   position: absolute;
   bottom: 10px;
-  left: calc(50% - 15px);
+  left: 0;
+  right: 0;
   animation: bounce 1s infinite linear;
 }
 
@@ -84,7 +85,12 @@ section.what-is-it>div {
     transform: translateY(0px);
   }
 }
-/* @media screen and (max-width: 700px) { */
-/*   header { */
-/*   } */
-/* } */
+@media screen and (min-width: 800px) {
+  header {
+    padding: calc(var(--space) * 18) var(--space);
+    font-size: 2.75rem;
+  }
+  header img {
+    width: 500px;
+  }
+}
