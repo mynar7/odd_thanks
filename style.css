@@ -1,0 +1,90 @@
+:root {
+  --oddcolor-light: rgb(0,241,202);
+  --oddcolor-medium: rgb(0,161,135);
+  --oddcolor-dark: rgb(0,85,91);
+  --space: 16px;
+  --font-size: 18px;
+  font-size: var(--font-size);
+  font-family: 'Figtree', sans-serif;
+  color: var(--oddcolor-medium);
+  text-align: center;
+}
+
+html, body {
+  margin: 0;
+}
+a {
+  color: var(--oddcolor-light);
+}
+h2 {
+  font-size: 3rem;
+}
+header, section {
+  padding: calc(var(--space) * 12) var(--space);
+}
+
+header {
+  background-color: var(--oddcolor-medium);
+  color: white;
+  font-size: 1.5rem;
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+header img {
+  filter: brightness(0) invert(1);
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+header .scroll-down {
+  position: absolute;
+  bottom: 10px;
+  left: calc(50% - 15px);
+  animation: bounce 1s infinite linear;
+}
+
+section.me-and-why-the-gift img {
+  display: block;
+  margin: auto;
+  margin-bottom: calc(var(--space) * 4);
+  width: 200px;
+  height: auto;
+}
+section.me-and-why-the-gift {
+  max-width: 600px;
+  display: block;
+  margin: auto;
+}
+
+section.what-is-it {
+  background-color: var(--oddcolor-dark);
+  color: white;
+}
+section.what-is-it>div {
+  max-width: 800px;
+  display: block;
+  margin: auto;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  70% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* @media screen and (max-width: 700px) { */
+/*   header { */
+/*   } */
+/* } */
