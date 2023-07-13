@@ -22,7 +22,10 @@ h2 {
 header, section {
   padding: calc(var(--space) * 12) var(--space);
 }
-
+.center {
+  display: block;
+  margin: auto;
+}
 header {
   background-color: var(--oddcolor-medium);
   color: white;
@@ -36,8 +39,6 @@ header img {
   filter: brightness(0) invert(1);
   width: 300px;
   height: auto;
-  display: block;
-  margin: auto;
 }
 
 header .scroll-down {
@@ -49,16 +50,12 @@ header .scroll-down {
 }
 
 section.me-and-why-the-gift img {
-  display: block;
-  margin: auto;
   margin-bottom: calc(var(--space) * 4);
   width: 200px;
   height: auto;
 }
 section.me-and-why-the-gift {
   max-width: 600px;
-  display: block;
-  margin: auto;
 }
 
 section.what-is-it {
@@ -67,8 +64,44 @@ section.what-is-it {
 }
 section.what-is-it>div {
   max-width: 800px;
+}
+section.faq h2 {
+  color: var(--oddcolor-dark)
+}
+section.faq ul{
+  max-width: 800px;
+  list-style: none;
+  padding-left: 0;
+}
+section.faq ul>li>p:first-child {
+  color: var(--oddcolor-dark);
+}
+section.faq ul>li>p:last-child {
+  font-style: italic;
+}
+section.faq ul>li>p:first-child:before,
+section.faq ul>li>p:last-child:before {
+  content: "Q: ";
+  font-weight: bold;
+  font-style: normal;
+}
+section.faq ul>li>p:last-child:before {
+  content: "A: ";
+}
+section.faq ul>li {
+  margin-bottom: calc(var(--space) * 3);
+}
+section.faq ul>li:not(:last-child):after {
+  content: " ";
   display: block;
-  margin: auto;
+  width: 100%;
+  border-bottom: 1px dotted var(--oddcolor-light);
+  padding-top: var(--space);
+}
+
+footer {
+  padding: calc(var(--space) * 4) 0;
+  font-size: 0.75rem;
 }
 
 @keyframes bounce {
